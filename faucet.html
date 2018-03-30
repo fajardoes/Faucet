@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Refresh" content="300">
+    <title>Superior Coin Faucet!   </title> 
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="images/iconsc.png"/>
+<!--     <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+</head>
+<body style=" background-image: -webkit-linear-gradient(#383333, #383333 50%, #ecf0f1);
+    background-image: -o-linear-gradient(#3d3939, #3d3939 50%, #2b3a49);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ecf0f1), color-stop(50%, #446e9b), to(#3e648d));
+    background-image: linear-gradient(#ecf0f1, #3d3939 50%, #ecf0f1);
+    background-repeat: no-repeat;"> 
+<nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+               <a class="navbar-brand" role="button"><img style="max-width:45px; margin-top: -15px; margin-left:30px;"
+                src="images/superiorlogo.png"><b>Superior Coin</b></a>
+                <br>   
+          </div>
+                <div class="nav navbar-nav" style="margin-top:20px; margin-left:-5px;">
+                          <label class="label" style="font-size:12px; display: none;" id="lblwallet">Wallet Address:</label>
+    <br>
+                <p class="label" style="font-size:10px; max-width: 30%; line-height:16px; display: none;" id="walletid">
+               </p>  
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" style="margin-top:20px;">
+                <li><a id="user_email"></a></li>
+                <li><a role="button" id="view_withdraw">Withdraw</a></li>
+                <li><a role="button" id="viewbalance">My balance</a></li>
+              <li><a role="button" id="viewstats">My Stats</a></li>
+              <li><a id="sign_out" role="button">Sign out</a></li>    
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+      <div class="container">
+
+          <h1 class="custom-text-white"><b>Superior Coin Faucet</b></h1>
+          <h3 class="custom-text-white">Secure <i class="fas fa-dot-circle" style="color: darkslategrey;"></i> Fast <i class="fas fa-dot-circle" style="color: darkslategrey;"></i> Untraceable</h3>
+          <br>
+          <h4 class="custom-text-white">Get your free Superior Coins (SUP) every 1 hour!</h4>
+            <div class="row">
+                <div class="col-md-4 custom-transparent">
+                    <h2 class="custom-text-white"><i class="fas fa-users"></i> Total users</h2>
+                    <h3 class="custom-text-white" id="total_users"></h3>
+                </div>
+                <div class="col-md-4 custom-transparent">
+                    <h2 class="custom-text-white"><i class="fas fa-check"></i> Total Rewards</h2>
+                    <h3 class="custom-text-white" id="total_rewards"></h3>
+                </div>
+                <div class="col-md-4 custom-transparent">
+                        <h2 class="custom-text-white"><i class="fas fa-dollar-sign"></i> Total Paid</h2>
+                        <h3 class="custom-text-white" id="total_paid"></h3>
+                    </div>
+            </div>
+         
+            <div class="row">
+                    <div id="first" class="image-center column">
+                    <h2 class="custom-text-white">Free Superior Coin (SUP)</h2>
+                    <p class="custom-text-white">You can win between 10 and 50 SUP every 1 hour.</p>
+                    <div class="alert alert-warning " role="alert" style="background-color: rgba(0,0,0,0.5); text-align: center;" >
+                      <p style="color:snow;">Get your free coins!</p>
+                      <button type="button" class="btn btn-warning btn-lg" id="btn_claim">Claim reward</button>
+                      
+                      <!-- <div class="g-recaptcha dark-light" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" ></div> -->
+                    </div>
+           </div>
+                  
+                  <div id="second" class="image-center column" style="display:none;">
+                    <h2 class="custom-text-white">Back in 1 hour!</h2>
+                    <div class="alert alert-success" role="alert" style=" background-color: rgba(0,0,0,0.5);">
+                      <h4>Reward Redeemed!</h4>
+                      <h4>You win<a class="label" id="paid"></a><a class="label">SUP!!!</a></h4>
+                    </div>
+                    
+                  </div>            
+            </div>
+
+              <div class="row">
+              <h1 class="custom-text-white">WHAT IS SUPERIOR COIN?</h1>
+                <img class="image-center";"
+                src="images/sc.png">
+                <p class="custom-text-white" style="font-size: 20px;"><strong>Superior Coin</strong> is a secure, private, untraceable currency. Unlike many crypto currencies that are derivatives of Bitcoin, Superior Coin is based on the CryptoNote protocol and possesses significant algorithmic differences relating to blockchain obfuscation. Superior Coins main emission curve will have issued about 1.5 billion coins to be mined in over 30+ years. Superior Coin protects privacy in three ways for all transactions on the network: 1 ring signatures hide the sending address, 2 RingCT hides the amount of the transaction, and 3 stealth addresses hide the receiving address of the transaction.</p>
+              <br>
+              <br>
+              <br>
+            </div>  
+            <div class="row">
+              <h1 class="custom-text-white">COIN SPECTS</h1>
+              <br>
+              <br>
+              <div class="row">
+                    <p class="custom-text-white"><a target="_blank" href="https://github.com/TheSuperiorCoin" class="btn custom-button btn-lg" role="button">Github</a> and <a target="_blank" href="https://bitcointalk.org/index.php?topic=2088169.0" class="btn custom-button btn-lg">BitcoinTalk</a></p>
+              </div>
+          
+            </div>           
+            <br>
+              <br>
+              <hr>
+  <h4 class="custom-text1" style="letter-spacing: 1px; margin: 0 0 35px 0; text-align: center;">Our Social Sites</h4>
+  <div class="row">
+    <div style="text-align: center;">
+    <ul class="list-inline banner-social-buttons">
+    <li><a role="button"><i class="fab fa-twitter fa-4x" style="color: #00aced;"></i></a></li>
+    <li><a role="button"><i class="fab fa-facebook-square fa-4x" style="color: #3b5998;"></i></a></li>
+    <li><a role="button"><i class="fab fa-youtube-square fa-4x" style="color: #cc181e;"></i></a></li>
+    <li><a role="button"><i class="fab fa-google-plus fa-4x" style="color: #d34836;"></i></a></li>
+  </ul>
+    </div>
+  </div> 
+  <hr>
+  <hr>                        
+            <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header modal-header-success"> 
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                          <h5 class="custom-text1"><b>Are you sure you want to claim your coins?</b></h5>
+                        
+                        </div>
+                        <div class="modal-body">
+                          <p class="custom-text1">You will be able to claim again in one hour!</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" id="redeem" class="btn btn-warning" data-dismiss="modal">Yes!</button>
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+           </div>   
+           <div class="modal fade" id="statsmodal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header modal-header-stats"> 
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="color: white;">&times;</span>
+                          </button>
+                          <h5><b>My Stats</b></h5>                      
+                        </div>
+                        <div class="modal-body">
+                          <h2 class="custom-text1">Last 100 rewards</h2>
+                          <div class="records_content"></div>
+                          <button type="button" class="btn btn-light btn-sm" data-dismiss="modal">Close</button>
+                          <button role="button" class="btn btn-light btn-sm disabled">History rewards<br></button>
+                        </div>
+                 <!--        <div class="modal-footer">
+                          
+                        </div> -->
+                      </div>
+                    </div>
+           </div>  
+                  <div class="modal fade" id="balancemodal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header modal-header-stats"> 
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="color: white;">&times;</span>
+                          </button>
+                          <h5 class="custom-text-white"><b>Rewards Balance</b></h5>                      
+                        </div>
+                        <div class="modal-body-balance">
+                          <h2 class="custom-text1">My Balance</h2>
+                          <h3 class="custom-text-green" id="id_balance"></h3>
+                           <button type="button" class="btn btn-light btn-sm" data-dismiss="modal">Close</button>
+                        </div>
+               <!--          <div class="modal-footer">
+                          <button role="button" class="btn btn-primary btn-sm">History rewards<br></button>
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div> -->
+                      </div>
+                    </div>
+           </div>     
+              <div class="modal fade" id="withdraw_modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header modal-header-stats"> 
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="color: white;">&times;</span>
+                          </button>
+                          <h5 class="custom-text-white"><b>Withdraw your coins</b></h5>                      
+                        </div>
+                        <div class="modal-body-balance">
+                          <div class="row" style="margin: 7px;">
+                            <div class="form-group col-lg-3">
+                           <label class="custom-text1">My wallet:</label>
+                           <pre class="custom-text1" style="font-size: 10px; white-space: pre-wrap;" id="id_wallet"></pre>
+                            </div>
+                          </div>
+                          <div class="row" style="margin: 7px;">
+                            <div class="form-group col-lg-3">
+                           <label class="custom-text1">My Faucet Balance:</label>
+                           <label class="custom-text-green" id="id_balancew"></label>
+                            </div>
+                          </div>
+                          <div class="row" style="margin: 7px;">
+                            <div class="form-group col-lg-3">
+                              <label class="custom-text1 control-label">Amount</label>
+                              <input type="number" name="amount" placeholder="Amount" class="form-control" id="amount_w">
+                              <br>
+                               <button type="button" class="btn btn-outline-success" data-dismiss="modal" id="btn_transfer">Transfer</button>
+                            </div>
+                          </div>
+                         <!--  <div class="form-group col-sm-2">
+                          <label class="custom-text1">My Faucet Balance</label><label class="custom-text-green" id="id_balance">250.00</label>
+                        </div> -->
+                          
+                        </div>
+               <!--          <div class="modal-footer">
+                          <button role="button" class="btn btn-primary btn-sm">History rewards<br></button>
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div> -->
+                      </div>
+                    </div>
+           </div>                   
+      </div>
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery_cookie.js"></script>
+<script src="js/newcrud.js"></script>
+<script defer src="js/fontawesome-all.js"></script>
+
+</script>
+<script type="text/javascript">
+  $(document).ready(function(e){
+    $("#view_withdraw").click(function(){
+    OpenWithdraw()
+    });
+  });
+</script>
+<script type="text/javascript">
+        $(document).ready(function(e){
+          $("#redeem").click(function() {
+              var wallet = localStorage.getItem("walle");
+              var minNumber = 10;
+              var maxNumber = 50;
+              var payment = randomNumberFromRange(minNumber, maxNumber);
+                $.post('insert_reward.php',{
+                wallet : wallet,
+                payment:payment},
+                function(data,status)
+                {
+                  var values = JSON.parse(data);
+                  if (values.status == 200) {
+                    alert("Invalid Request");
+                    window.location.href ="index.html";
+                  }else{
+                    $("#first").hide();
+                    $("#second").show();
+                    $("#paid").text(payment);
+                  }               
+                }
+                );
+               })
+             })
+
+        </script>
+
+
+           <script type="text/javascript">    
+            window.onload = OnLoadPage();
+            </script>
+            <script type="text/javascript">
+              $(document).ready(function(e){
+                $("#sign_out").click(function(){
+                  Cookies.remove('session');
+                  window.location.href = "index.html"
+                })
+              })
+            </script>
+            <script type="text/javascript">
+              $(document).ready(function(e){
+                $("#btn_claim").click(function(){
+                  var wallet = localStorage.getItem("walle");
+                  if (wallet == "") {
+                    window.location.href = "index.html";
+                  }
+                  else{
+                  $.post('check_last_reward.php',{
+                  wallet : wallet},
+                  function(data,status)
+                  {
+                    var values = JSON.parse(data);
+                    value = values[0];
+                    var minutes = parseInt(value);
+                    if (minutes < 60) {
+                      $wait = (60 - minutes);
+                      alert("You have to wait "+$wait+" minutes to claim again! \nBe patient!");
+                    }else{
+                      $("#confirmModal").modal("show");
+                    }                  
+                   }
+                  );
+                  }           
+                })
+              })
+            </script>
+            <script type="text/javascript">
+              $(document).ready(function(e){
+                $("#viewstats").click(function(){
+                  ReadPayments();
+                  $("#statsmodal").modal("show");
+                })
+              })
+            </script>
+            <script type="text/javascript">
+              $(document).ready(function(e){
+                $("#viewbalance").click(function(){
+                  readBalance();
+
+                })
+              })
+            </script>
+
+     <div class="footer">
+  <p>Superior Coin Copryght 2018.</p>
+</div>       
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Superior Coin Faucet!!</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="shortcut icon" type="image/png" href="images/iconsc.png"/>
+</head>
+<body style="background-image: -webkit-linear-gradient(#383333, #383333 50%, #ecf0f1);
+    background-image: -o-linear-gradient(#3d3939, #3d3939 50%, #2b3a49);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ecf0f1), color-stop(50%, #446e9b), to(#3e648d));
+    background-image: linear-gradient(#ecf0f1, #3d3939 50%, #ecf0f1);
+    background-repeat: no-repeat;">
+<!-- Content Section -->
+    <div class="container">
+
+	<div style="text-align: center;">
+			<h1 class="custom-text1">Superior Coin Faucet</h1>
+		<br>
+		<h3 class="custom-text1">We're giving away every 1 hour!</h3>
+	</div>
+	<div class="modal-dialog modal-lg" id="mymodal">
+		<div class="modal-content" style="background-color: rgba(0,0,0,0.5);">
+			<div class="modal-header">
+			<h4 class="modal-title"><img src="images/superiorlogo.png" class="center-block img-circle logo-margin-negative"></h4>
+			</div>
+			<div class="modal-body">
+				    <h4 style="letter-spacing: 1px; margin: 0 0 35px 0; text-align: center;">Enter your Superior Coin wallet address</h4>
+          <div class="row">        
+          	<div class="input-group">
+				<input class="form-control" type="text" placeholder="wallet address" id="wallet">
+				<span class="input-group-addon" id="user_query"> <span class="glyphicon glyphicon-btc"></span></span>
+			</div>	
+          </div>
+          <br>
+          <div class="row">
+          	 <div class="col-sm-4 col-sm-offset-4">
+          	 	<button type="button" class="btn btn-warning btn-block" id="btn_enter">Go!</button>
+          	 </div>
+		  </div>
+			</div>
+          <br>
+	     	<div class="modal-footer">
+	      <br>
+	      <h5 style="letter-spacing: 1px; margin: 0 0 35px 0; text-align: center;">Join us to start to win Superior Coins (SUP)!</h5>
+	      <div class="row">
+	      	<div class="col-sm-4 col-sm-offset-4">
+	      		<button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#add_new_record_modal">Sign-up</button>
+	      	</div>
+	      </div>
+
+       </div>
+</div>
+</div>
+</div>
+<hr>
+	<h3 class="custom-text1">Our Social Sites</h3>
+	<div class="row">
+		<div style="text-align: center;">
+   	<ul class="list-inline banner-social-buttons">
+	<li><a href="#"><i class="fab fa-twitter fa-4x" style="color: #00aced;"></i></a></li>
+    <li><a href="#"><i class="fab fa-facebook-square fa-4x" style="color: #3b5998;"></i></a></li>
+    <li><a href="#"><i class="fab fa-youtube-square fa-4x" style="color: #cc181e;"></i></a></li>
+    <li><a href="#"><i class="fab fa-google-plus fa-4x" style="color: #d34836;"></i></a></li>
+	</ul>
+		</div>
+
+	</div>
+
+<!-- Bootstrap Modal - To Add New Record -->
+<!-- Modal -->
+<div class="modal fade" id="add_new_record_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<h3 class="modal-title" id="myModalLabel">Sign Up</h3>
+<br>
+<p>Please fill in this form to create an account.</p>
+<br>
+<p id="msg" class="label label-warning"></p>
+</div>
+<div class="modal-body">
+	<form id="form">
+			<div class="form-group">
+					<label for="first_name">First Name</label>
+					<input type="text" id="first_name" placeholder="First Name" class="form-control" required />
+					</div>
+					<div class="form-group">
+					<label for="last_name">Last Name</label>
+					<input type="text" id="last_name" placeholder="Last Name" class="form-control" required />
+					</div>
+					 
+					<div class="form-group">
+					<label for="email">Email Address</label>
+					<input type="text" id="email" placeholder="Email Address" class="form-control" required/>
+					</div>
+					<div class="form-group">
+							<label for="phone">Phone number</label>
+							<input type="text" id="phone" placeholder="Phone number" class="form-control" />
+							</div>
+					 <div class="form-group" id="formpass">
+					   <label for="pass">Password</label>
+					   <input type="password" id="pass" placeholder="Password" class="form-control" required />
+					  </div>
+						<div class="form-group">
+						<label for="cpass">Repeat Password</label>
+						<input type="password" id="cpass" placeholder="Repeat Password" class="form-control" required />
+						</div>
+						<!-- <script>
+						$("#cpass").blur(function(){
+						if($("#pass").val() != $("#cpass").val()) {
+							alert('Password does not match'); 
+						}
+					});
+					</script> -->
+						<div class="form-group">
+						<label for="walletad">Wallet Address</label>
+						<input type="text" id="walletad" placeholder="Wallet-Address" class="form-control" required />
+						</div>		
+						<br> 	
+						<button id="submit" type="button" class="btn btn-success">Sign me up!</button>
+						
+	</form>			       					
+</div>
+<div class="modal-footer">
+	<div class="row">
+			<button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+			
+	</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="succes_signup_modal" tabindex="-1" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header modal-header-success">
+			  <h4 style="color:white;" class="modal-title"> <i class="glyphicon glyphicon-thumbs-up"></i> Thanks! </h4>
+			</div>
+			<div class="modal-body">
+			  <p>You have successfully signed up to Superior Coin!</p>
+			</div>
+			<div class="modal-footer">
+			  <button id="enter_main" type="button" class="btn btn-warning" data-dismiss="modal"><i class="fas fa-hand-pointer fa-2x"></i></button>
+			</div>
+		  </div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	  </div><!-- /.modal -->
+
+	  <div class="modal fade" id="alert_modal" tabindex="-1" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header modal-header-error">
+			  <h4 style="color:white;" class="modal-title">Wait!</h4>
+			</div>
+			<div class="modal-body">
+			  <p class="custom-text" id="alert_msg"></p>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-danger" data-dismiss="modal">OK</button>
+			</div>
+		  </div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	  </div><!-- /.modal -->
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/jquery_cookie.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/newcrud.js"></script>
+<script defer src="js/fontawesome-all.js"></script>
+</body>
+</html>
