@@ -1,0 +1,2 @@
+# Faucet
+Superior Coin Faucet
